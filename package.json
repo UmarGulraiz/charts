@@ -3,17 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@amcharts/amcharts4": "^4.10.12",
+    "@amcharts/editor4": "^4.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "ncp": "^2.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "copy-editor": "ncp ./node_modules/@amcharts/editor4/am4editor ./public/am4editor",
+    "start": "yarn copy-editor && react-scripts start",
+    "build": "yarn copy-editor && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

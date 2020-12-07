@@ -20,8 +20,8 @@
   },
   "scripts": {
     "copy-editor": "ncp ./node_modules/@amcharts/editor4/am4editor ./public/am4editor",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn copy-editor && react-scripts start",
+    "build": "yarn copy-editor && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
